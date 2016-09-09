@@ -6,14 +6,16 @@
     private $city;
     private $state;
     private $zip;
+    private $phone;
 
-    function __construct($name, $streetAddress, $city, $state, $zip)
+    function __construct($name, $streetAddress, $city, $state, $zip, $phone)
     {
         $this->name = $name;
         $this->streetAddress = $streetAddress;
         $this->city = $city;
         $this->state = $state;
         $this->zip = $zip;
+        $this->phone = $phone;
 
     }
     function getName()
@@ -66,13 +68,23 @@
       $this->zip = (string) $zip;
     }
 
+    function getPhone()
+    {
+      return $this->phone;
+    }
+
+    function setPhone()
+    {
+      $this->phone = (string) $phone;
+    }
+
     function save()
     {
-      array_push($_SESSION["contacts"], $this);
+      array_push($_SESSION["list_of_contacts"], $this);
     }
     static function getAll()
     {
-        return $_SESSION['contacts'];
+        return $_SESSION['list_of_contacts'];
     }
 
     static function deleteAll()

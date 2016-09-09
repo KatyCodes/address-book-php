@@ -21,6 +21,9 @@
       <label>Enter Zip</label>
       <input name="zip">
       <br>
+      <label>Enter Phone number</label>
+      <input name="phone">
+      <br>
       <button type="submit">Enter</button>
     </form>
     {% if contacts is not empty %}
@@ -32,6 +35,8 @@
             {{contact.streetAddress}}
             <br>
             {{contact.city}} {{contact.state}}, {{contact.zip}}
+            <br>
+            {{contact.phone}}
           </li>
       {% endfor %}
     </ol>
