@@ -11,5 +11,10 @@
       return $app['twig']->render('home.html.twig');
     });
 
+    $app->post("/confirm_address", function() use ($app){
+      $new_address = new AddressBook($_POST["name"]);
+      return $app['twig']->render('confirm.html.twig', array("address" => $new_address));
+    });
+
     return $app;
  ?>

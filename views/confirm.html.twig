@@ -7,15 +7,19 @@
     <h1>My address book</h1>
     <form action="/confirm_address" method="post">
       <label>Enter a Name:</label>
-      <input name="name">
+      <input name="name" type="text">
       <br>
       <label>Enter a street address:</label>
-      <input name="address">
+      <input name="address" type="text">
       <br>
       <label>Enter City, State, Zip</label>
-      <input name="address2">
+      <input name="address2" type="text">
       <br>
       <button type="submit">Enter</button>
     </form>
+    <p>
+      here
+      {{address.name}}
+    </p>
   </body>
 </html>
