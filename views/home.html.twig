@@ -23,12 +23,19 @@
       <br>
       <button type="submit">Enter</button>
     </form>
+    {% if contacts is not empty %}
     <h3>Your address book:</h3>
     <ol>
       {% for contact in contacts %}
-          <li>1</li>
+          <li>{{contact.name}}
+            <br>
+            {{contact.streetAddress}}
+            <br>
+            {{contact.city}} {{contact.state}}, {{contact.zip}}
+          </li>
       {% endfor %}
-  </ol>
+    </ol>
+  {% endif %}
   <form action="/delete" method="post">
     <button type="submit">Delete All Contacts</button>
   </form>

@@ -68,11 +68,11 @@
 
     function save()
     {
-      array_push($_SESSION["allAddresses"], $this);
+      array_push($_SESSION["contacts"], $this);
     }
     static function getAll()
     {
-        return $_SESSION['allAddresses'];
+        return $_SESSION['contacts'];
     }
 
     static function deleteAll()
