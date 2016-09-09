@@ -75,5 +75,10 @@
         return $_SESSION['allAddresses'];
     }
 
+    static function deleteAll()
+    {
+      return $_SESSION= array();
+    }
+
   }
  ?>
