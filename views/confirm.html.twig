@@ -4,22 +4,18 @@
     <title>My address book.</title>
   </head>
   <body>
-    <h1>My address book</h1>
-    <form action="/confirm_address" method="post">
-      <label>Enter a Name:</label>
-      <input name="name" type="text">
-      <br>
-      <label>Enter a street address:</label>
-      <input name="address" type="text">
-      <br>
-      <label>Enter City, State, Zip</label>
-      <input name="address2" type="text">
-      <br>
-      <button type="submit">Enter</button>
-    </form>
+    <h1>A new address!</h1>
     <p>
-      here
-      {{address.name}}
+      {{newaddress.name}}
+      <br>
+      {{newaddress.streetAddress}}
+      <br>
+      {{newaddress.city}}
+      <br>
+      {{newaddress.state}}
+      <br>
+      {{newaddress.zip}}
     </p>
+    <a href="/">Enter another address</a>
   </body>
 </html>

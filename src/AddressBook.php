@@ -2,11 +2,19 @@
   class AddressBook
   {
     private $name;
+    private $streetAddress;
+    private $city;
+    private $state;
+    private $zip;
 
-    function __construct($name)
+
+    function __construct($name, $streetAddress, $city, $state, $zip)
     {
         $this->name = $name;
-        $this->address = $address;
+        $this->streetAddress = $streetAddress;
+        $this->city = $city;
+        $this->state = $state;
+        $this->zip = $zip;
 
     }
 
@@ -15,6 +23,24 @@
       return $this->name;
     }
 
+    function getStreetAddress()
+    {
+      return $this->streetAddress;
+    }
+
+    function getCity()
+    {
+      return $this->city;
+    }
+
+    function getState()
+    {
+      return $this->state;
+    }
+    function getZip()
+    {
+      return $this->zip;
+    }
 
   }
  ?>
